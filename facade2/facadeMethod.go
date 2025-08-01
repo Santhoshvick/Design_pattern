@@ -2,14 +2,13 @@ package main
 
 import "fmt"
 
-type PackageTicketBooking struct{
+type PackageTicketBooking struct {
 	fbooking *flightBooking
 	hbooking *hotelTicketBooking
 	cbooking *CarRental
 }
 
-
-func packedTicket(fbook *flightBooking,hbook *hotelTicketBooking,cbook *CarRental)*PackageTicketBooking{
+func packedTicket(fbook *flightBooking, hbook *hotelTicketBooking, cbook *CarRental) *PackageTicketBooking {
 	fmt.Println(fbook.Bookticket())
 	fmt.Print(hbook.BookHotel())
 	fmt.Println(cbook.BookCar())
@@ -20,17 +19,17 @@ func packedTicket(fbook *flightBooking,hbook *hotelTicketBooking,cbook *CarRenta
 	}
 }
 
-func CancelTicket()*PackageTicketBooking{
+func CancelTicket() *PackageTicketBooking {
 	fmt.Println("Ticket is canceled Successfully")
 	return &PackageTicketBooking{
 		fbooking: nil,
 		hbooking: nil,
-		cbooking:nil,
+		cbooking: nil,
 	}
 
 }
 
-func (s *PackageTicketBooking)bookPackage(){
+func (s *PackageTicketBooking) bookPackage() {
 	s.cbooking.BookCar()
 	s.hbooking.BookHotel()
 	s.hbooking.BookHotel()
