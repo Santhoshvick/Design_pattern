@@ -26,8 +26,9 @@ func CancelTicket() *PackageTicketBooking {
 		hbooking: nil,
 		cbooking: nil,
 	}
-
 }
+
+
 
 func (s *PackageTicketBooking) bookPackage() {
 	s.cbooking.BookCar()
