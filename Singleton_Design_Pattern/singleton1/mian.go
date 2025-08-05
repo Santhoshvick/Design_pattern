@@ -9,6 +9,6 @@ func main(){
 
 	i2:=getInstance()
     fmt.Println()
-	fmt.Println(i2.count)
+	fmt.Println(i2.getCount())
 
 }
