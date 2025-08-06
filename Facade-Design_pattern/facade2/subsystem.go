@@ -19,8 +19,8 @@ func (f *flightBooking)Bookticket() *flightBooking{
 		FromDestination: f.FromDestination,
 		ToDestination: f.ToDestination,
 	}
-	
 }
+
 
 type hotelTicketBooking struct{
 	HotelName string
