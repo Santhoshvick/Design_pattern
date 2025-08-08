@@ -8,6 +8,7 @@ type Reception struct{
 
 
 func(r * Reception)execute(p *Patient){
+	p.registrationDone=true
 	if p.registrationDone{
 		fmt.Println("Patient has been successfully  registerred")
 		r.next.execute(p)

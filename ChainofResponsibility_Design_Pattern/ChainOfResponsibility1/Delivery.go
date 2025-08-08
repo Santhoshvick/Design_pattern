@@ -18,5 +18,5 @@ func (d *Delivery)execute(c *Customer){
 }
 
 func (d *Delivery)setNext(next CarDepartment){
-	d.next=next
+	d.next=nil
 }

@@ -19,3 +19,4 @@ func(w *ATM)withdraw(amount float64)string{
 	w.Balance=w.Balance-float32(amount)
 	return "Withdraw Successfull"
 }
+

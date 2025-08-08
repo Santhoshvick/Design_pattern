@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+
 type CarBooking struct{
 	next CarDepartment
 }

@@ -41,8 +41,5 @@ func main(){
 	employee2.EmployeeName="Dewald Brewis"
 	employee2.EmployeeSalary=550000.00
 	employee2.Eid=100001 
-
 	fmt.Println(employee2)
-
-
 }

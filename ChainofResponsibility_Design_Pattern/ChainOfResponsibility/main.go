@@ -7,16 +7,13 @@ func main(){
 	medication1:=&Medication{}
 	cashier1:=&Cashier{}
 
-	patient1:=&Patient{name: "Santhosh"}
-	reception1.execute(patient1)
-
-	reception1.setNext(doctor1)
-
-	
-    doctor1.setNext(medication1)
-
+    reception1.setNext(doctor1)
+	doctor1.setNext(medication1)
 	medication1.setNext(cashier1)
 
+
+	patient := &Patient{name: "John"}
+	reception1.execute(patient)
 
 	
 	

@@ -10,7 +10,7 @@ func (d *Doctor)execute(p *Patient){
 	if p.medicalDone{
 		fmt.Println("The Patient is successfully consulted the doctor")
 		d.next.execute(p)
-		return
+		return 
 	}
 	fmt.Println("The patient is waiting to consult the doctor")
 	p.medicalDone=true

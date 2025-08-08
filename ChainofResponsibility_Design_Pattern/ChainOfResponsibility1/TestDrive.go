@@ -16,8 +16,7 @@ func (t *TestDrive)execute(c *Customer){
 	fmt.Println("The Customer is waiting for the Test Drive")
 	c.TestDrive=true
 	t.next.execute(c)
-	
-}
+} 
 func (t *TestDrive)setNext(next CarDepartment){
 	t.next=next
 }
