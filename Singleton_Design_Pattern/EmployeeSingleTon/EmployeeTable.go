@@ -18,15 +18,28 @@ var Global *Employee
 var once sync.Once
 
 
-func(e *Employee) CreateInstanceOnce()*Employee{
+func CreateInstanceOnce()*Employee{
 	if(Global==nil){
 		once.Do(func(){
 			fmt.Println("Employee Table is creaed Successfully")
-			Global=&Employee{}
-
+			Global=&Employee{EmpName: "John",EmpId: 1901,Location: "Chennai",Salary: 450000.00,Role: "Software Developer"}
 		})
 	}
-	Global=&Employee{EmpName: e.EmpName,EmpId: e.EmpId,Location: e.Location,Salary: e.Salary,Role: e.Role}
-	
+
 	return  Global
+}
+
+func (e *Employee)Update(ename string,eid int64,loc string,sal float64,role string){
+	e.EmpName=ename
+	e.EmpId=eid
+	e.Location=loc
+	e.Salary=sal
+	e.Role=role
+
+	fmt.Print("Eid:",e.EmpId)
+	fmt.Print("Ename:",e.EmpName)
+	fmt.Print("Location:",e.Location)
+	fmt.Printf("Salary:%1f",e.Salary)
+	fmt.Print("Role:",e.Role)
+
 }

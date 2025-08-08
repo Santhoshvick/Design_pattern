@@ -43,8 +43,4 @@ func (l *Ledger)Record(message1 string,amount float64)*Ledger{
 		Message: message1,
 		Amount: amount,
 	}
-
-
-	
-
 }

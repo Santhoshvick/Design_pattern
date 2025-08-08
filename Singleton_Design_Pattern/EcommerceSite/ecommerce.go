@@ -27,14 +27,14 @@ var val=false
 
 
 
-func (p *ProductCard)AddProduct(userName string,Password string)*ProductCard{
+func AddProduct(userName string,Password string)*ProductCard{
 	
 	if(instance==nil){
 		once.Do(func(){
 			user:="santhosh"
 			password:="1234"
 			if(user==userName&&Password==password){
-				instance=&ProductCard{}
+				instance=&ProductCard{ProductId: 9908,ProductName:"Mackbook Air",ProductPrice: 120000,ProductDescription: "Macbook air with 14 inch display"}
 				val=true
 			   fmt.Println("Login  Successfully")
 			}else{
@@ -43,13 +43,21 @@ func (p *ProductCard)AddProduct(userName string,Password string)*ProductCard{
 			}
 		})
 	}
-
-	
     if val {
-		instance:=&ProductCard{ProductId: p.ProductId,ProductName: p.ProductName,ProductPrice: p.ProductPrice,ProductDescription: p.ProductDescription}
 	   return instance
 	}
 
 	return nil
-	
+}
+
+func(p *ProductCard)Update(pid int64,pname string,price int64,pdescription string){
+	p.ProductId=pid
+	p.ProductName=pname
+	p.ProductPrice=price
+	p.ProductDescription=pdescription
+
+	fmt.Print("Product Id:",p.ProductId)
+	fmt.Print("Product Name:",p.ProductName+"\t")
+	fmt.Print("Product Price:",p.ProductPrice)
+	fmt.Print("Product Description:",p.ProductDescription)
 }

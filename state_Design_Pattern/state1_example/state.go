@@ -21,7 +21,6 @@ func (s *Switch) Press() {
 }
 
 
-
 type OnState struct{}
 
 
